@@ -1,0 +1,320 @@
+/* ─── Page ──────────────────────────────────────────────────── */
+.login-page {
+  min-height: 100vh;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* ─── Card ──────────────────────────────────────────────────── */
+.login-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 44px 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0,0,0,0.04);
+  border: 1px solid #F0F0F4;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative top accent */
+.login-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2463eb, #60a5fa);
+}
+
+/* ─── Top Bar ───────────────────────────────────────────────── */
+.login-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 36px;
+}
+
+.login-topbar-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #94A3B8;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ─── Back Button ───────────────────────────────────────────── */
+.back-btn {
+  position: absolute;
+  left: 0;
+  background: #F8FAFC;
+  border: 1px solid #E8EDF2;
+  cursor: pointer;
+  font-size: 14px;
+  color: #475569;
+  padding: 6px 12px;
+  border-radius: 8px;
+  line-height: 1;
+  transition: all 0.2s;
+  font-weight: 600;
+}
+
+.back-btn:hover {
+  background: #F1F5F9;
+  color: #1e293b;
+  border-color: #CBD5E1;
+}
+
+/* ─── Header ────────────────────────────────────────────────── */
+.login-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0 0 10px;
+  letter-spacing: -0.6px;
+  line-height: 1.2;
+}
+
+.login-subtitle {
+  font-size: 14px;
+  color: #94A3B8;
+  margin: 0 0 32px;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+/* ─── Error ─────────────────────────────────────────────────── */
+.error-box {
+  background: #FFF8F8;
+  border: 1px solid #FECACA;
+  border-left: 3px solid #EF4444;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  font-size: 13.5px;
+  color: #DC2626;
+  white-space: pre-line;
+  font-weight: 500;
+}
+
+/* ─── Label ─────────────────────────────────────────────────── */
+.field-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #475569;
+  margin-bottom: 7px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+/* ─── Field Wrap ────────────────────────────────────────────── */
+.field-wrap {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* ─── Icon ──────────────────────────────────────────────────── */
+.field-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #CBD5E1;
+  font-size: 15px;
+  pointer-events: none;
+  transition: color 0.2s;
+}
+
+.field-wrap:focus-within .field-icon {
+  color: #2463eb;
+}
+
+/* ─── Input ─────────────────────────────────────────────────── */
+.field-input {
+  width: 100%;
+  padding: 13px 16px 13px 44px;
+  border: 1.5px solid #E8EDF2;
+  border-radius: 10px;
+  font-size: 14.5px;
+  outline: none;
+  background-color: #FAFBFC;
+  box-sizing: border-box;
+  color: #0F172A;
+  font-family: inherit;
+  transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+
+.field-input:focus {
+  border-color: #2463eb;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(36, 99, 235, 0.08);
+}
+
+.field-input::placeholder {
+  color: #C8D0DC;
+  font-weight: 400;
+}
+
+/* ─── Eye Button ────────────────────────────────────────────── */
+.eye-btn {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #94A3B8;
+  font-size: 16px;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.eye-btn:hover {
+  color: #2463eb;
+}
+
+/* ─── Forgot Password ───────────────────────────────────────── */
+.forgot-wrap {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 28px;
+  margin-top: -12px;
+}
+
+.forgot-link {
+  font-size: 13px;
+  color: #2463eb;
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.forgot-link:hover {
+  color: #1a4fbd;
+  text-decoration: underline;
+}
+
+/* ─── Submit Button ─────────────────────────────────────────── */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: #2463eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 16px rgba(36, 99, 235, 0.28);
+  letter-spacing: 0.02em;
+  font-family: inherit;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #1a4fbd;
+  box-shadow: 0 6px 20px rgba(36, 99, 235, 0.36);
+  transform: translateY(-1px);
+}
+
+.submit-btn:active:not(:disabled) {
+  transform: translateY(0px) scale(0.99);
+}
+
+.submit-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ─── Divider ───────────────────────────────────────────────── */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: #E8EDF2;
+}
+
+.divider-text {
+  font-size: 10.5px;
+  color: #94A3B8;
+  white-space: nowrap;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+/* ─── Social Buttons ────────────────────────────────────────── */
+.social-wrap {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.social-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px;
+  border: 1.5px solid #E8EDF2;
+  border-radius: 10px;
+  background-color: #FAFBFC;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.social-btn:hover {
+  background-color: #F1F5F9;
+  border-color: #CBD5E1;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.social-icon {
+  width: 18px;
+  height: 18px;
+  font-size: 16px;
+}
+
+/* ─── Register Link ─────────────────────────────────────────── */
+.register-link-wrap {
+  text-align: center;
+  font-size: 13.5px;
+  color: #94A3B8;
+  margin: 0;
+  font-weight: 400;
+}
+
+.register-link {
+  color: #2463eb;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.register-link:hover {
+  color: #1a4fbd;
+  text-decoration: underline;
+}
